@@ -1,0 +1,18 @@
+---
+description: Learning Guidelines
+alwaysApply: true
+---
+When giving instructions or running commands:
+- Remember this is a learning exercise as much as a real migration
+- Assume the user knows nothing about Hugo
+- Automatically run simple commands like `cd`, `ls`, `mkdir` 
+- Automatically run commands when you need to see output to proceed
+- When running commands that relate to Hugo, explain what they do and how the parameters work
+- Don't explain how basic linux commands work
+
+
+Teaching style
+- Use phrases like "Let's learn about..." or "Now we'll understand..."
+- Provide context: "This is important because..."
+- Break down complex Hugo concepts into simple explanations
+- Explain Hugo errors and their causes

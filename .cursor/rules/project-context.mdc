@@ -1,0 +1,10 @@
+---
+description: Project Context
+alwaysApply: true
+---
+Project context and information is stored in @README.md. Always read the @README.md file to understand:
+- Project overview and goals
+- Current state and progress
+
+When we discuss a change in direction for the project:
+- Update the @README.md file to match the new direction

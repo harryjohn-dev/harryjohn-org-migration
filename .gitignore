@@ -1,0 +1,5 @@
+# Ruby/Bundler files (excluding our wayback downloader dependencies)
+vendor/
+
+# Python virtual environments
+.venv/

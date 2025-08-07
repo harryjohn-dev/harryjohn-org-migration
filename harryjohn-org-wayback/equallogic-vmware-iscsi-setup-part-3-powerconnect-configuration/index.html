@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.harryjohn.org/xmlrpc.php" />
+
+
+
+<!-- This site is optimized with the Yoast SEO plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>EqualLogic VMware iSCSI Setup - Part 3: PowerConnect Configuration</title>
+<link rel="canonical" href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="EqualLogic VMware iSCSI Setup - Part 3: PowerConnect Configuration" />
+<meta property="og:description" content="So, recently I configured a set of PowerConnect 7048 switches for iSCSI following all the standards and best practices I could find. Actually I had prepared the PowerConnect iSCSI configuration a few months ago, I have been waiting for the Dell experts to confirm the configuration is current best practice and fit for our environment. &hellip;" />
+<meta property="og:url" content="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/" />
+<meta property="og:site_name" content="Harry John" />
+<meta property="article:tag" content="EqualLogic" />
+<meta property="article:tag" content="iSCSI" />
+<meta property="article:tag" content="Networking" />
+<meta property="article:tag" content="SAN" />
+<meta property="article:tag" content="Switches" />
+<meta property="article:section" content="EqualLogic VMware iSCSI Setup" />
+<meta property="article:published_time" content="2013-12-30T11:47:06+00:00" />
+<meta property="article:modified_time" content="2014-01-04T17:22:29+00:00" />
+<meta property="og:updated_time" content="2014-01-04T17:22:29+00:00" />
+<meta property="og:image" content="http://www.harryjohn.org/wp-content/uploads/2013/12/34017.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Harry John &raquo; Feed" href="http://www.harryjohn.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Harry John &raquo; Comments Feed" href="http://www.harryjohn.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Harry John &raquo; EqualLogic VMware iSCSI Setup &#8211; Part 3: PowerConnect Configuration Comments Feed" href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.harryjohn.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='http://www.harryjohn.org/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='infosource_style-css'  href='http://www.harryjohn.org/wp-content/themes/infosource/style.css?ver=4.7.8' type='text/css' media='all' />
+<link rel='stylesheet' id='easy_table_style-css'  href='http://www.harryjohn.org/wp-content/plugins/easy-table/themes/default/style.css?ver=1.5.3' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v6.0.16 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-38803066-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<script type='text/javascript' src='http://www.harryjohn.org/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.harryjohn.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"http:\/\/www.harryjohn.org\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.harryjohn.org/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<script type='text/javascript' src='http://www.harryjohn.org/wp-content/themes/infosource/library/js/modernizr-2.6.2.min.js?ver=2.6.2'></script>
+<script type='text/javascript' src='http://www.harryjohn.org/wp-content/themes/infosource/library/js/scripts.js?ver=1.0.0'></script>
+<link rel='https://api.w.org/' href='http://www.harryjohn.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.harryjohn.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.harryjohn.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.8" />
+<link rel='shortlink' href='http://www.harryjohn.org/?p=32' />
+<link rel="alternate" type="application/json+oembed" href="http://www.harryjohn.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.harryjohn.org%2Fequallogic-vmware-iscsi-setup-part-3-powerconnect-configuration%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.harryjohn.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.harryjohn.org%2Fequallogic-vmware-iscsi-setup-part-3-powerconnect-configuration%2F&#038;format=xml" />
+<script type='text/javascript'>
+var e_mailit_config = {display_counter:false,follow_services:{},thanks_message:'Thanks for sharing!',mobile_bar:true,after_share_dialog:true,display_ads:true,hover_pinit:false,open_on:'onclick',emailit_branding:true,headline:[]};(function() {	var b=document.createElement('script');	
+                        b.type='text/javascript';b.async=true;
+	
+                        b.src='//www.e-mailit.com/widget/menu3x/js/button.js';
+	
+                        var c=document.getElementsByTagName('head')[0];	c.appendChild(b) })()</script>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("http://www.harryjohn.org/wp-content/themes/infosource/library/images/bg.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+</head>
+
+<body class="post-template-default single single-post postid-32 single-format-standard custom-background single-author">
+
+<header id="branding" role="banner">
+  <div id="inner-header" class="clearfix">
+    <div id="site-heading">
+        <div id="site-title"><a href="http://www.harryjohn.org/" title="Harry John" rel="home">Harry John</a></div>
+    </div>
+    <form role="search" method="get" id="searchform" class="searchform" action="http://www.harryjohn.org/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>  </div>
+  
+  <nav id="access" role="navigation">
+  	<div id="inner-nav" class="clearfix">
+        <h1 class="assistive-text section-heading">Main menu</h1>
+        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+        <div class="menu"><ul><li ><a href="http://www.harryjohn.org/">Home</a></li><li class="page_item page-item-5"><a href="http://www.harryjohn.org/about/">About</a></li></ul></div>    </div>
+  </nav><!-- #access -->
+</header><!-- #branding -->
+
+<div id="container">
+
+    <div id="content" class="clearfix">
+        
+        <div id="main" class="col620 clearfix" role="main">
+
+			
+				
+<article id="post-32" class="post-32 post type-post status-publish format-standard hentry category-equallogic-vmware-iscsi-setup tag-equallogic tag-iscsi tag-networking tag-san tag-switches">
+	<div class="post-meta-style">
+        <div class="post-date-style"><a href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/" rel="bookmark">Dec 30, 2013</a></div>
+        <p class="post-author-style">by <a class="url fn n" href="http://www.harryjohn.org/author/harry/" title="View all posts by Harry John" rel="author">Harry John</a></p><p class="post-cat-style">in <a href="http://www.harryjohn.org/category/equallogic-vmware-iscsi-setup/" rel="tag">EqualLogic VMware iSCSI Setup</a></p>            
+       				<p class="post-comment-style"><a href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/#respond"><span class="white">Leave a</span> comment</a></p>
+		    </div>
+<div class="content-wrap">
+  <div class="post-wrap">
+    	<header class="entry-header">
+		<h1 class="entry-title">EqualLogic VMware iSCSI Setup &#8211; Part 3: PowerConnect Configuration</h1>
+	</header><!-- .entry-header -->
+    
+	<div class="entry-content post_content">
+		<div class="e-mailit_top_toolbox"><div class="e-mailit_toolbox square size32 " data-emailit-url='http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/' data-emailit-title='EqualLogic VMware iSCSI Setup &#8211; Part 3: PowerConnect Configuration'>
+<div class="e-mailit_btn_Facebook"></div>
+<div class="e-mailit_btn_Twitter"></div>
+<div class="e-mailit_btn_Send_via_Email"></div>
+<div class="e-mailit_btn_Pinterest"></div>
+<div class="e-mailit_btn_LinkedIn"></div>
+<div class="e-mailit_btn_EMAILiT"></div></div>
+</div><p><a href="http://www.harryjohn.org/wp-content/uploads/2013/12/34017.jpg"><img class="aligncenter size-full wp-image-191" alt="PowerConnect 7048 Switch" src="http://www.harryjohn.org/wp-content/uploads/2013/12/34017.jpg" width="2100" height="598" srcset="http://www.harryjohn.org/wp-content/uploads/2013/12/34017.jpg 2100w, http://www.harryjohn.org/wp-content/uploads/2013/12/34017-300x85.jpg 300w, http://www.harryjohn.org/wp-content/uploads/2013/12/34017-1024x291.jpg 1024w, http://www.harryjohn.org/wp-content/uploads/2013/12/34017-624x177.jpg 624w" sizes="(max-width: 2100px) 100vw, 2100px" /></a>So, recently I configured a set of PowerConnect 7048 switches for iSCSI following all the standards and best practices I could find. Actually I had prepared the PowerConnect iSCSI configuration a few months ago, I have been waiting for the Dell experts to confirm the configuration is current best practice and fit for our environment.</p>
+<p>Configuring any PowerConnect model is a very similar process, however you must check the switch documentation you downloaded from the portal on part 1 of this guide &#8211; there may be a few minor differences. I will note now that PowerConnect 5524/5548 switches are not approved for use in an iSCSI environment and that iSCSI Optimisation should actually be disabled on these switches.<span id="more-32"></span></p>
+<p>If you are using a non-PowerConnect set of switches, there are a list of switch requirements within the <a href="http://en.community.dell.com/techcenter/storage/w/wiki/2639.equallogic-configuration-guide.aspx">Dell EqualLogic Configuration Guide as of v14.3</a> &#8211; this document does get updated frequently (on a quarterly basis to be precise) and has been much improved recently. I highly recommend reviewing this document fully as most of the information you need is now well documented here.</p>
+<h2>iSCSI Setup Best Practices</h2>
+<p><strong>My goals when configuring these switchers were to:</strong></p>
+<ol>
+<ol>
+<ol>
+<li>have a completely isolated iSCSI network</li>
+<li>follow all best practices where possible</li>
+<li>use the Out-of-Band (OOB) interface for switch management</li>
+<li>add a new VMware VM Network port group to the iSCSI virtual network and use this for the SAN HQ server monitoring and management</li>
+</ol>
+</ol>
+</ol>
+<p><strong>Also, the switch features we need to enable for iSCSI best practice are as follows:</strong></p>
+<ul>
+<li>Flow control</li>
+<li>Jumbo frames</li>
+<li>Portfast</li>
+<li>Storm control</li>
+<li>Non default VLAN</li>
+</ul>
+<h2>EqualLogic SAN Infrastructure Best Practices</h2>
+<p>The following excerpt is from the <a href="https://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;ved=0CEkQFjAB&amp;url=http%3A%2F%2Fen.community.dell.com%2Fdell-groups%2Fdtcmedia%2Fm%2Fmediagallery%2F19852516%2Fdownload.aspx&amp;ei=CojBUvHVNoiohAe2v4DQCw&amp;usg=AFQjCNFmLxa1fyg3c9SbaryjGUnuJR6nYA&amp;bvm=bv.58187178,d.ZG4">Dell EqualLogic Configuration Guide v14.3</a>, I have picked a few of the most important/least obvious best practices however I would still recommended you read through the entire list:</p>
+<ul>
+<li>It is strongly recommended that a physically separated network be used for iSCSI traffic and that this network not be shared with other traffic types.</li>
+<li>Rapid Spanning Tree Protocol must be enabled if the SAN infrastructure has more than two switches in a non-stacked configuration, and portfast must be enabled on all edge device ports (hosts, FS Series appliances and arrays).</li>
+<li>All switches within the SAN must be interconnected such that there is always a path from any Ethernet port on one array to all other Ethernet ports on all other arrays in the group.</li>
+<li>All switches and host network controllers within the infrastructure must have (at a minimum, receive) flow control enabled for optimal performance.</li>
+<li>Take advantage of your switch’s VLAN capabilities. You may optionally create a VLAN dedicated to iSCSI traffic (even on dedicated switches). If necessary, create a second VLAN for management traffic. The actual VLAN configuration of your iSCSI SAN will be dictated by your SAN network design requirements and the features of the iSCSI SAN switches being used.</li>
+<li>Jumbo frames should be enabled for best performance. If you choose to use jumbo frames then all nodes in the SAN fabric must have jumbo frames enabled.</li>
+<li>For best performance and reliability, we recommend that all interconnection paths between non-stacking switches (LAGs) use a dynamic link aggregation protocol such as LACP</li>
+</ul>
+<h2>PowerConnect 7048 iSCSI Configuration</h2>
+<p>Below are the exact configuration steps I took to install my PowerConnect 7048s. Please note all environments vary &#8211; you should refer to the documents mentioned in the preparation section of this guide and ensure you follow the appropriate steps for your specific hardware.</p>
+<p><b>Step 1: </b>Enter configuration mode<br />
+<code>enable<br />
+configure</code></p>
+<p><strong>Step 2: </strong>Configure management network<br />
+<code>interface out-of-band<br />
+ip address 172.16.0.101<br />
+exit</code></p>
+<p><strong>Step 3: </strong>Configure management security<br />
+<code>line telnet<br />
+login authentication default<br />
+password [password]<br />
+exit<br />
+ip http authentication local<br />
+username admin password [password] privilege 15</code></p>
+<p><strong>Step 4: </strong>Enable iSCSI Optimisation and flow control<br />
+<code>iscsi enable<br />
+flowcontrol</code></p>
+<p><strong>Step 5: </strong>Add iSCSI VLAN<br />
+<code>vlan database<br />
+vlan 100<br />
+exit<br />
+interface vlan 100<br />
+name iSCSI<br />
+exit</code></p>
+<p><strong>Step 6: </strong>Enable jumbo frames, Portfast and storm control<br />
+<code>interface range Gigabitethernet all<br />
+switchport access vlan 100<br />
+mtu 9216<br />
+spanning-tree portfast<br />
+no storm-control unicast<br />
+storm-control multicast<br />
+storm-control broadcast<br />
+exit<br />
+exit</code></p>
+<p><strong>Step 7: </strong>Save config and reboot<br />
+<code>copy running-config startup-config<br />
+reload</code></p>
+<h2>PowerConnect iSCSI Stack vs LAG</h2>
+<p>Whilst multi-pathing will manage the paths between the hosts and arrays without an Inter-Switch Link (ISL), it is important that there is sufficient inter-switch bandwidth as the EqualLogic arrays are quite chatty and can produce a lot of network traffic between themselves, especially when performance and capacity load balancing are enabled with more than one array. As mentioned above in the list of best practices, all the switches in the SAN must interconnect.</p>
+<p>The real question is whether you choose to interconnect by means of stacking or creating a Link Aggregate Group (LAG). There are some pros and cons of both:</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="73">Stacking</td>
+<td valign="top"><span style="text-decoration: underline;">Advantages:</span>&nbsp;</p>
+<ul>
+<li>Simpler to implement</li>
+<li>Easier to manage multiple switches as a single switch</li>
+<li>Possibly higher bandwidth and lower latency than using link aggregation and Ethernet</li>
+</ul>
+<p><span style="text-decoration: underline;">Disadvantages:</span></p>
+<ul>
+<li>Cannot interconnect switches from different vendors</li>
+<li>Increases cost of switch</li>
+<li>Must schedule downtime when upgrading firmware as you cannot upgrade on each switch independently</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top" width="73">LAG</td>
+<td valign="top" width="543"><span style="text-decoration: underline;">Advantages:</span>&nbsp;</p>
+<ul>
+<li>Can interconnect switches from different vendors</li>
+<li>Cheaper cost of switch</li>
+<li>Can upgrade switch firmware on each switch independently – no maintenance downtime</li>
+</ul>
+<p><span style="text-decoration: underline;">Disdvantages:</span></p>
+<ul>
+<li>Some solutions limited to eight port link aggregation group (8Gbps)</li>
+<li>Spanning tree protocol must be used if more than two switches are used – causes some links to be “blocked” and reduces bandwidth availability</li>
+<li>Possibly less bandwidth than stacking</li>
+<li>More complex to implement</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<div class="e-mailit_bottom_toolbox"><div class="e-mailit_toolbox square size32 " data-emailit-url='http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/' data-emailit-title='EqualLogic VMware iSCSI Setup &#8211; Part 3: PowerConnect Configuration'>
+<div class="e-mailit_btn_Facebook"></div>
+<div class="e-mailit_btn_Twitter"></div>
+<div class="e-mailit_btn_Send_via_Email"></div>
+<div class="e-mailit_btn_Pinterest"></div>
+<div class="e-mailit_btn_LinkedIn"></div>
+<div class="e-mailit_btn_EMAILiT"></div></div>
+</div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://www.harryjohn.org/category/equallogic-vmware-iscsi-setup/" rel="tag">EqualLogic VMware iSCSI Setup</a> and tagged <a href="http://www.harryjohn.org/tag/equallogic/" rel="tag">EqualLogic</a>, <a href="http://www.harryjohn.org/tag/iscsi/" rel="tag">iSCSI</a>, <a href="http://www.harryjohn.org/tag/networking/" rel="tag">Networking</a>, <a href="http://www.harryjohn.org/tag/san/" rel="tag">SAN</a>, <a href="http://www.harryjohn.org/tag/switches/" rel="tag">Switches</a>. Bookmark the <a href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/" title="Permalink to EqualLogic VMware iSCSI Setup &#8211; Part 3: PowerConnect Configuration" rel="bookmark">permalink</a>.
+			</footer><!-- .entry-meta -->
+    </div>
+    <div class="clearfix shadowfix"></div>
+  </div>
+</article><!-- #post-32 -->
+
+					<nav id="nav-below">
+		<h1 class="assistive-text section-heading">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-2-network/" rel="prev"><span class="meta-nav">&larr; Previous</span></a></div>		<div class="nav-next"><a href="http://www.harryjohn.org/deploy-multiple-vms-from-template/" rel="next"><span class="meta-nav">Next &rarr;</span></a></div>
+	
+	</nav><!-- #nav-below -->
+	
+					<div id="comments">
+	
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://www.harryjohn.org/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='32' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="04ada5e28a" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="206"/></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+			
+        </div> <!-- end #main -->
+
+        		<div id="sidebar" class="widget-area col300" role="complementary">
+        	<div id="social-media" class="clearfix">
+				                 
+                   
+                                                                            </div>
+
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.harryjohn.org/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://www.harryjohn.org/office-2016-install-we-need-to-remove-some-older-apps/">Office 2016 Install &#8211; &#8220;We need to remove some older apps&#8221;</a>
+						</li>
+					<li>
+				<a href="http://www.harryjohn.org/deploy-multiple-vms-from-template/">Deploy multiple VMs from template with PowerCLI</a>
+						</li>
+					<li>
+				<a href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/">EqualLogic VMware iSCSI Setup &#8211; Part 3: PowerConnect Configuration</a>
+						</li>
+					<li>
+				<a href="http://www.harryjohn.org/equallogic-vmware-iscsi-setup-part-2-network/">EqualLogic VMware iSCSI Setup &#8211; Part 2: Network Configuration</a>
+						</li>
+					<li>
+				<a href="http://www.harryjohn.org/veeam-backup-job-failed-cannot-create-a-shadow-copy-of-the-volumes-containing-writers-data/">Veeam Backup job failed. Cannot create a shadow copy of the volumes containing writer&#8217;s data.</a>
+						</li>
+				</ul>
+		</aside>		<aside id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://www.universaltech.com.au' rel='external nofollow' class='url'>Rabin</a></span> on <a href="http://www.harryjohn.org/office-2016-install-we-need-to-remove-some-older-apps/#comment-36046">Office 2016 Install &#8211; &#8220;We need to remove some older apps&#8221;</a></li><li class="recentcomments"><span class="comment-author-link">Phil</span> on <a href="http://www.harryjohn.org/office-2016-install-we-need-to-remove-some-older-apps/#comment-35654">Office 2016 Install &#8211; &#8220;We need to remove some older apps&#8221;</a></li><li class="recentcomments"><span class="comment-author-link">MG</span> on <a href="http://www.harryjohn.org/office-2016-install-we-need-to-remove-some-older-apps/#comment-35340">Office 2016 Install &#8211; &#8220;We need to remove some older apps&#8221;</a></li><li class="recentcomments"><span class="comment-author-link">Vince F</span> on <a href="http://www.harryjohn.org/office-2016-install-we-need-to-remove-some-older-apps/#comment-35159">Office 2016 Install &#8211; &#8220;We need to remove some older apps&#8221;</a></li><li class="recentcomments"><span class="comment-author-link">Steve</span> on <a href="http://www.harryjohn.org/office-2016-install-we-need-to-remove-some-older-apps/#comment-35066">Office 2016 Install &#8211; &#8220;We need to remove some older apps&#8221;</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<ul>
+			<li><a href='http://www.harryjohn.org/2015/09/'>September 2015</a></li>
+	<li><a href='http://www.harryjohn.org/2014/01/'>January 2014</a></li>
+	<li><a href='http://www.harryjohn.org/2013/12/'>December 2013</a></li>
+	<li><a href='http://www.harryjohn.org/2013/02/'>February 2013</a></li>
+		</ul>
+		</aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://www.harryjohn.org/category/equallogic-vmware-iscsi-setup/" >EqualLogic VMware iSCSI Setup</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://www.harryjohn.org/category/powercli/" >PowerCLI</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.harryjohn.org/category/uncategorized/" >Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.harryjohn.org/category/vmware/" >VMware</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h2 class="widget-title">Meta</h2>			<ul>
+						<li><a rel="nofollow" href="http://www.harryjohn.org/wp-login.php">Log in</a></li>
+			<li><a href="http://www.harryjohn.org/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.harryjohn.org/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside>		</div><!-- #sidebar .widget-area -->
+
+    </div> <!-- end #content -->
+        
+
+</div><!-- #container -->
+
+<footer id="colophon" role="contentinfo">
+    <div id="site-generator">
+        &copy; Harry John		    </div>
+</footer><!-- #colophon -->
+
+<script type='text/javascript' src='http://www.harryjohn.org/wp-content/plugins/akismet/_inc/form.js?ver=3.3'></script>
+<script type='text/javascript' src='http://www.harryjohn.org/wp-includes/js/wp-embed.min.js?ver=4.7.8'></script>
+<script type='text/javascript' src='http://www.harryjohn.org/wp-includes/js/comment-reply.min.js?ver=4.7.8'></script>
+
+</body>
+</html>
