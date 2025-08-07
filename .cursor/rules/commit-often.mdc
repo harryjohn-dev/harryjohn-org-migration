@@ -1,0 +1,13 @@
+---
+description: Commit Frequently with Conventional Commits
+alwaysApply: true
+---
+Use conventional commits format: `type: Capitalized description`
+
+Examples:
+- `feat: Add PaperMod theme to Hugo site`
+- `config: Update Hugo baseURL and site title`
+- `content: Import WordPress posts as markdown`
+- `fix: Resolve image path issues in blog posts`
+
+The AI assistant will suggest commits and run the command directly after significant steps.
