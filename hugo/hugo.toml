@@ -1,3 +1,12 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://harryjohn.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Harry John'
+theme = 'PaperMod'
+
+[params]
+  description = "Harry John's blog about IT infrastructure, VMware, and technology"
+  author = "Harry John"
+  
+[params.homeInfoParams]
+  Title = "Hi there 👋"
+  Content = "Welcome to my blog about IT infrastructure, VMware, and technology."
