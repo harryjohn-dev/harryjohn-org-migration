@@ -6,6 +6,7 @@ description: "Office 2016 was made available today to the Office 365 subscribers
 tags: ["office", "microsoft", "office365", "installation", "troubleshooting"]
 categories: ["uncategorized"]
 author: "Harry John"
+comments: true
 ---
 
 ## "We need to remove some older apps"

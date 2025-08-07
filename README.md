@@ -53,8 +53,9 @@ Done - see [docs/planning.md](docs/planning.md)
 2. ✅ Cleanup and process markdown conversion
 3. ✅ Fix assets/images/URLs
 4. ✅ Import remaining WordPress posts
+5. ✅ Add comments system with data-driven approach
 
-**Progress**: ✅ Successfully imported all 6 WordPress posts with proper front matter, clean markdown, and working images. Content migration complete!
+**Progress**: ✅ Successfully imported all 6 WordPress posts with proper front matter, clean markdown, working images, and comments system. Content migration complete!
 
 ### Phase 3: Publishing 🔄
 1. 🔄 Create separate Hugo-only repository for deployment

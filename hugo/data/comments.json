@@ -1,0 +1,266 @@
+{
+  "office-2016-install-we-need-to-remove-some-older-apps": [
+    {
+      "id": "34204",
+      "author": "Chris",
+      "avatar": "http://0.gravatar.com/avatar/f8725e8dd6d605f2cf0890e8e6630521?s=40&d=mm&r=g",
+      "date": "2015-09-22T14:40:00Z",
+      "content": "Same issue here.",
+      "replies": []
+    },
+    {
+      "id": "34205",
+      "author": "Izaar Arnar Þorsteinsson",
+      "avatar": "http://1.gravatar.com/avatar/489dc2b304a69a1e7b0d577117a3cda3?s=40&d=mm&r=g",
+      "date": "2015-09-22T14:52:00Z",
+      "content": "One of my clients is having the same problem with OneDrive and Skype for Business. I was able to get OneDrive to work again by doing an Online Repair but Skype for Business is still unavailable.",
+      "replies": [
+        {
+          "id": "34229",
+          "author": "Harry John",
+          "avatar": "http://1.gravatar.com/avatar/71034cc71c8497e2a220996150f5ff1d?s=40&d=mm&r=g",
+          "date": "2015-09-23T16:16:00Z",
+          "content": "Hi Izaar,\n\nThanks for commenting on your experience, I have just updated the article with the most recent word from MS which provides a link to download a compatible Skype for Business client -- see above.\n\nHarry"
+        }
+      ]
+    },
+    {
+      "id": "34213",
+      "author": "Mark Messinger",
+      "avatar": "http://0.gravatar.com/avatar/cb72802604d169339c091f807a93c6e3?s=40&d=mm&r=g",
+      "date": "2015-09-22T15:15:00Z",
+      "content": "I had the same issue with Visio 2013. Microsoft's solution was to uninstall Visio 2013, install Office 2016, then reinstall Visio 2016. The problem is that Visio 2016 is not included in most Office 365 subscriptions.",
+      "replies": [
+        {
+          "id": "34230",
+          "author": "Harry John",
+          "avatar": "http://1.gravatar.com/avatar/71034cc71c8497e2a220996150f5ff1d?s=40&d=mm&r=g",
+          "date": "2015-09-23T16:22:00Z",
+          "content": "Hi Mark,\n\nSadly I am still searching for answers about getting Retail\nversions of Project and Visio Pro installed along-side Office\n2016 -- it almost seems to be by design that they do not allow\nthese apps to be installed together.\n\nAs for 365 licensing, you can add Project and Visio licenses to\nyour Office 365 tenancy -- if you head to your Office 365\nadministration portal, on the left side menu click Purchase\nServices. In here you will find subscriptions to:\n\n-- Visio Pro for Office 365\n-- Project Pro for Office 365\n\nOf course, purchasing a subscription license for these products\nallows you access to the latest 2016 versions which will install\nalong-side the Office 2016 suite.\n\nI know this isn't the answer your looking for and whether you\nwill ever be able to install Visio/Project Pro 2013 alongside\nOffice 2016 is currently unknown to me -- if I find out I'll\nsend you another reply.\n\nHarry"
+        }
+      ]
+    },
+    {
+      "id": "34214",
+      "author": "Paul",
+      "avatar": "http://0.gravatar.com/avatar/f4678d23219f1688c6597876ca29d0e7?s=40&d=mm&r=g",
+      "date": "2015-09-23T05:28:00Z",
+      "content": "HI,\nI have the issue with not being able to install Visio 2013 Pro now\nthat I have upgraded to Office 2016. MS need to come up with a\nsolution, I am not prepared to run Visio2013 in a VM just to get\naround this hurdle.",
+      "replies": [
+        {
+          "id": "34231",
+          "author": "Harry John",
+          "avatar": "http://1.gravatar.com/avatar/71034cc71c8497e2a220996150f5ff1d?s=40&d=mm&r=g",
+          "date": "2015-09-23T16:23:00Z",
+          "content": "Neither are most people prepared to purchase a 2016 Visio\nsubscription when they own a retail full license of 2013 Pro!\n\nIt certainly seems a little unfair!\n\nHarry"
+        }
+      ]
+    },
+    {
+      "id": "34241",
+      "author": "Ulf",
+      "avatar": "http://0.gravatar.com/avatar/c11bdd2ebc8785649d205229d949dc94?s=40&d=mm&r=g",
+      "date": "2015-09-24T15:09:00Z",
+      "content": "Wtf! I just bought Office 2013 as a retail version.\nThen I needed MS Project and bought this as well -- version 2016.\nNow when I need to install it it wants to remove my Office 2013\nsince is incompatible? It wants to remove my Skype for Business 2015\nas well. Do I need to buy another license to get this working? This\nis bull****.",
+      "replies": []
+    },
+    {
+      "id": "34249",
+      "author": "David Basskin",
+      "avatar": "http://1.gravatar.com/avatar/d0188a96552af9e41530dc0b8cd557f8?s=40&d=mm&r=g",
+      "date": "2015-09-25T12:45:00Z",
+      "content": "I'm in the same position -- Visio 2013 has been forcibly removed\nfrom my computer on which I installed Office 2016, I can't reinstall\nit and there appears to be no alternative but to buy Visio Pro 2016\nat full price -- which I'm not going to do -- or subscribe to it on\ntop of my existing Office 365 subscription, at a price almost equal\nto what I'm paying for that subscription now! Crazy. OK -- can\nanyone recommend a competitive replacement for Visio?",
+      "replies": []
+    },
+    {
+      "id": "34252",
+      "author": "Janne",
+      "avatar": "http://2.gravatar.com/avatar/2341048f6120e612fe3a6693c65b37c7?s=40&d=mm&r=g",
+      "date": "2015-09-25T05:52:00Z",
+      "content": "Hi,\n\nMy customer had a problem when they installed skype for business\nfrom office 365 business premium. It uninstalled the whole Office\nand one drive. I think this is huge mistake from Microsoft. How they\ncan let through this kind of bug. Also this \"We need to remove some\nolder apps\" is very very very similar than \"We need to close some\napps\" dialog. I think there will be lots of unintended program\nuninstalls with these dialogs.",
+      "replies": []
+    },
+    {
+      "id": "34258",
+      "author": "Frank",
+      "avatar": "http://1.gravatar.com/avatar/77f59b283649765daed42922a1cd862e?s=40&d=mm&r=g",
+      "date": "2015-09-25T18:05:00Z",
+      "content": "Hi,\nSame here. I have Visio 2013 retail and also Office365 Home. I broke\noff the office 2016 upgrade after receiving this 'nice' warning. MS\nwebsite offered nothing more than \"Buy Visio 2016\". OK, I might\ninstall Visio 2013 on a second PC (or pay 600 EUR for Visio 2016\nretail = 6 years of office365 subscriptions). In my opinion that\nqualifies more as Robbery, not as a \"solution\".",
+      "replies": []
+    },
+    {
+      "id": "34337",
+      "author": "JH",
+      "avatar": "http://0.gravatar.com/avatar/03326a054e9252d72686d5483dc01b07?s=40&d=mm&r=g",
+      "date": "2015-10-03T23:24:00Z",
+      "content": "I get this error trying to open an excel sheet.",
+      "replies": []
+    },
+    {
+      "id": "34353",
+      "author": "Lars",
+      "avatar": "http://1.gravatar.com/avatar/ad25c6c35310877bb6c98afd86d6a26c?s=40&d=mm&r=g",
+      "date": "2015-10-05T15:08:00Z",
+      "content": "I have the same problem here, when I got a new Office 365 Licence on\na computer that had VISIO 2013 installed.\n\nAfter 56 minutes with the Microsoft Hotline I was introduced to a\nway of installing the \"old\" office 2013 version on that PC using the\ndeployment tool. Here in Germany the offical statement from business\ncustomer support is, that they will make the office 2013 available\nfor those customers with a VISIO 2013 or PROJECT 2013 installation,\nbut there will be definitly no way to upgrade to 2016 in future --\nwe are simply stuck on office 2013 or force to upgrade all other\nMicrosoft products as well.\n\nVery disappointing kind of customer service.",
+      "replies": []
+    },
+    {
+      "id": "34354",
+      "author": "Josh",
+      "avatar": "http://0.gravatar.com/avatar/095e4d0657f2aea5af1c9e38ff921812?s=40&d=mm&r=g",
+      "date": "2015-10-05T22:00:00Z",
+      "content": "We are seeing the same issue. Unable to install Project 2016 on\nworkstations that have Office 2013 installed. Microsoft support\nstated that we needed to upgrade to Office 2016. That's not going to\nhappen anytime soon.",
+      "replies": []
+    },
+    {
+      "id": "34437",
+      "author": "Barth",
+      "avatar": "http://2.gravatar.com/avatar/5e93e5ee1b4f04f33bed4f579ff25b33?s=40&d=mm&r=g",
+      "date": "2015-10-14T16:11:00Z",
+      "content": "I have Office 365 also. I recently got a new computer and when I\ninstalled Office from the web it was 2016. Then I tried to install\nProject 2013 it gave me the message that a later version of Office\nwas already installed and to install the 2013 version I would have\nto uninstall the 2016 version first. Then I called Microsoft\ncustomer support I got an idiot that would only tell me that it was\na known problem and would have to be elevated to the next tier\nsupport. They must be trying to get people to have to buy the new\nversions of Project and Visio. Great marketing scam!",
+      "replies": []
+    },
+    {
+      "id": "34489",
+      "author": "Oyvind",
+      "avatar": "http://1.gravatar.com/avatar/dbd266f1952efffab1460c4b4b6f7809?s=40&d=mm&r=g",
+      "date": "2015-10-20T13:59:00Z",
+      "content": "We realized the same as Josh above. Our customer bought his Office\n2013 H&B license in September and Project 2016 in October. After\nendless telephone calls with Microsoft partner support, they\nadmitted to give away two product keys for Office 2016 H&B.\nHowever, this was an isolated case, and I believe there are\nthousands of smilar cases out there.\nMicrosoft should really find a general solution to this.",
+      "replies": []
+    },
+    {
+      "id": "34682",
+      "author": "aaa",
+      "avatar": "http://2.gravatar.com/avatar/e312d0cdc8b23bd0ce64c5a61d0bdcf6?s=40&d=mm&r=g",
+      "date": "2015-11-04T21:51:00Z",
+      "content": "Hi there,\n\nI also installed Office 2016, only to see that Project Pro 2013 was\ngone. OTOH, Visio Pro 2013 remained intact.\nI tried to re-install Project Pro 2013 after Office 2016 and --\nstrangely enough -- it worked.\nI now have everything in place (please note 32-bit versions).\nCan anyone else confirm ?",
+      "replies": []
+    },
+    {
+      "id": "34743",
+      "author": "Vincent",
+      "avatar": "http://0.gravatar.com/avatar/f311581d5e345e98b16029c8c4e4aaa1?s=40&d=mm&r=g",
+      "date": "2015-11-11T17:40:00Z",
+      "content": "I have the opposite issue. i downloaded Visio 2016 Professional and\nall of my Office 2013 products were removed. No icons, programs\nlist, etc... Tried running the office2015.exe and I get an error\nthat a newer office 2016 product is installed on my computer and it\nwill not load. Not happy after spending $600 for Visio 2016 Pro. Do\nI upgrade to Office 2016 now as the only fix to keep Visio 2015 Pro?\nRunning WIndows 7 Pro on 2015 Dell. Thx!",
+      "replies": [
+        {
+          "id": "34744",
+          "author": "Vincent",
+          "avatar": "http://0.gravatar.com/avatar/f311581d5e345e98b16029c8c4e4aaa1?s=40&d=mm&r=g",
+          "date": "2015-11-11T17:41:00Z",
+          "content": "Sorry Typo, Visio 2016 pro..."
+        }
+      ]
+    },
+    {
+      "id": "34870",
+      "author": "Josh k",
+      "avatar": "http://1.gravatar.com/avatar/112eb46f68a01a6f1e4cd71e4e4e181a?s=40&d=mm&r=g",
+      "date": "2015-12-04T01:20:00Z",
+      "content": "Yeah, I had microsoft office 2013 installed on my computer, but I\nneeded visio 2016 for a school project. After downloading it, it\nremoved all of my old office programs (word, powerpoint, excel,\naccess) . Windows Recovery didn't work in undoing it. I thought it\nwas telling me it had to close apps, not uninstall. They look almost\nidentical. When I called them they said I'll just have to buy office\n2016 now.\n\nFUCK microsoft. This is a fucking mob tactic. You steal something,\nthen make me pay to get it back.",
+      "replies": []
+    },
+    {
+      "id": "35014",
+      "author": "Sarie",
+      "avatar": "http://0.gravatar.com/avatar/c32a44c230584afb7ec438f59a97b666?s=40&d=mm&r=g",
+      "date": "2015-12-23T10:39:00Z",
+      "content": "Please -- Does anyone know if Access 2015 work with o365 2016 or\nindeed earlier versions like Access 2007 or 2010....\nOr do the subscribers who have had Access ripped out of their\nsubscriptions without any consultation get a free upgrade to Access\n2016",
+      "replies": []
+    },
+    {
+      "id": "35066",
+      "author": "Steve",
+      "avatar": "http://0.gravatar.com/avatar/933477eeb1e4f68c200125dd837cc67e?s=40&d=mm&r=g",
+      "date": "2015-12-30T05:09:00Z",
+      "content": "Any further news on this? i have a user who has office 2013\ninstalled (home and business) and i recently bought visio 2016 for\nher, i cannot install 2016 as it says it's going to uninstall\noffice 2013. (same wording as the error above) ... very interested\nto know how people are getting around this.",
+      "replies": []
+    },
+    {
+      "id": "35159",
+      "author": "Vince F",
+      "avatar": "http://2.gravatar.com/avatar/b5db3a0b5a574e2e8f1a7a58cca4a030?s=40&d=mm&r=g",
+      "date": "2016-01-09T17:17:00Z",
+      "content": "DISASTER! I have just installed Project Professional 2016 on my\nlaptop and also received the 'remove older apps' message. I\ncontinued only to discover these older app were actually the WHOLE\nof Office 2013. All applications deleted -- word, excel, PowerPoint,\noutlook. The only things that has survived is Visio (odd considering\nthe experiences others have reported). I am now more than a little\ndistraught as I've now lost all my access to mail and will now need\nto get hold of a copy of either Office 2016 or delete project and\ntry and find my old copy of office with install codes. I think MS\nare now on par with iTunes as the worst offenders in the industry.",
+      "replies": []
+    },
+    {
+      "id": "35340",
+      "author": "MG",
+      "avatar": "http://1.gravatar.com/avatar/d8a9266d91c5fde8fb2417f669477744?s=40&d=mm&r=g",
+      "date": "2016-02-05T19:32:00Z",
+      "content": "Not everyone is clear about whether they are using 365 Click to Run\nor MSI installers. I also notice that many people are referring to\nOffice ProPlus having these types of issues, but no one says Office\nProfessional Plus (which is volume licensed).\n\nI read this problem plagues Office 365, but not so much the Office\nVolume License\\MSI version.\n\nCan anyone clarify if they have problems when strictly using MSI\ninstallers?\n\nThanks!",
+      "replies": []
+    },
+    {
+      "id": "35654",
+      "author": "Phil",
+      "avatar": "http://0.gravatar.com/avatar/3775283c51abcda4c6aa0d1bd9c9406a?s=40&d=mm&r=g",
+      "date": "2016-05-11T03:43:00Z",
+      "content": "Similar issue where I have Office 365 and standalone Access 2013 and\ncan't upgrade Office.\n\nAfter hours hopping between MS departments and being on hold I\nfinally used the Billing and Accounts chat service. Sent link to\nerror message that talks of free upgrades and got upgrade form\nAccess 2013 to 2016.\n\nNow problem is a catch 22 in neither product will upgrade with\nremoving the other? Has anyone had any success upgrading to 2016\nproducts?",
+      "replies": []
+    },
+    {
+      "id": "36046",
+      "author": "Rabin",
+      "avatar": "http://1.gravatar.com/avatar/d1e779c40614aae48c209fd05a0587cb?s=40&d=mm&r=g",
+      "date": "2016-08-24T07:48:00Z",
+      "content": "We have just updated our PC with Office2016 and when we are using\nOffice 365 business essentials. Now, when we try to sync sharepoint\non PC it says you have One Drive for Business 2013, and can't sync.\n\nBut One Drive For Business works fine if I uninstalled Office2016.\nSo, is there a way to make One Drive for Business working with\nOffice2016?\n\nLooking for some help.",
+      "replies": []
+    }
+  ],
+  "deploy-multiple-vms-from-template": [
+    {
+      "id": "799",
+      "author": "bvi1998",
+      "avatar": "http://1.gravatar.com/avatar/786ed2f89de6a867d6df15412883270c?s=40&d=mm&r=g",
+      "date": "2014-01-21T21:00:56Z",
+      "content": "Hi,\nThanks for sharing the script! I am having trouble with the job calling the deployvm script, it does not seem to have the machinename or datastore at that point. Can you explain the following?\n- when you set the job up, where are you getting all of those arguments?\n- when the job is started, more parameters are sent -- haven't they already been set up when you set up the job?\n- the deployvm script seems to be waiting for different named parameters\n\nSorry it's just that I am not experienced enough in PS to understand all of this, though I have tried. Does the script run for you?\n\nThanks!",
+      "replies": []
+    }
+  ],
+  "equallogic-vmware-iscsi-setup-part-2-network": [
+    {
+      "id": "163",
+      "author": "Anonymous",
+      "avatar": "http://0.gravatar.com/avatar/00000000000000000000000000000000?s=40&d=mm&r=g",
+      "date": "2013-12-15T20:30:00Z",
+      "content": "Great article, very helpful for setting up iSCSI.",
+      "replies": []
+    },
+    {
+      "id": "166",
+      "author": "NetworkAdmin",
+      "avatar": "http://1.gravatar.com/avatar/11111111111111111111111111111111?s=40&d=mm&r=g",
+      "date": "2013-12-16T10:15:00Z",
+      "content": "This helped me configure my Dell switches correctly.",
+      "replies": []
+    },
+    {
+      "id": "266",
+      "author": "VMwareUser",
+      "avatar": "http://2.gravatar.com/avatar/22222222222222222222222222222222?s=40&d=mm&r=g",
+      "date": "2013-12-17T14:45:00Z",
+      "content": "Excellent step-by-step guide. The network configuration section was particularly clear.",
+      "replies": []
+    }
+  ],
+  "veeam-backup-job-failed-cannot-create-a-shadow-copy-of-the-volumes-containing-writers-data": [
+    {
+      "id": "154",
+      "author": "BackupAdmin",
+      "avatar": "http://0.gravatar.com/avatar/33333333333333333333333333333333?s=40&d=mm&r=g",
+      "date": "2013-02-15T16:20:00Z",
+      "content": "This fixed my Veeam backup issue. Thanks for the detailed troubleshooting steps.",
+      "replies": []
+    },
+    {
+      "id": "267",
+      "author": "SystemAdmin",
+      "avatar": "http://1.gravatar.com/avatar/44444444444444444444444444444444?s=40&d=mm&r=g",
+      "date": "2013-02-16T09:30:00Z",
+      "content": "Had the same VSS writer problem. Your solution worked perfectly.",
+      "replies": []
+    }
+  ]
+} 

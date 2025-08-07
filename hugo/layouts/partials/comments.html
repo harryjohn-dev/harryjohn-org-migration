@@ -1,0 +1,108 @@
+{{- /* Comments area start */ -}}
+{{- if .Param "comments" -}}
+{{- $comments := index site.Data.comments .File.ContentBaseName -}}
+{{- if $comments -}}
+<div class="comments">
+  <h3>Comments</h3>
+  <div class="comment-list">
+    {{- range $comments -}}
+    <div class="comment">
+      <div class="comment-author">
+        <img src="{{ .avatar }}" alt="{{ .author }}" class="avatar" />
+        <strong>{{ .author }}</strong>
+        <span class="comment-date">{{ time.Format "January 2, 2006 at 3:04 pm" (time .date) }}</span>
+      </div>
+      <div class="comment-content">
+        {{- $paragraphs := split .content "\n\n" -}}
+        {{- range $paragraphs -}}
+        {{- if ne . "" -}}
+        <p>{{ . | replaceRE "\n" " " | safeHTML }}</p>
+        {{- end -}}
+        {{- end -}}
+      </div>
+      
+      {{- if .replies -}}
+      <div class="comment-replies">
+        {{- range .replies -}}
+        <div class="comment reply">
+          <div class="comment-author">
+            <img src="{{ .avatar }}" alt="{{ .author }}" class="avatar" />
+            <strong>{{ .author }}</strong>
+            <span class="comment-date">{{ time.Format "January 2, 2006 at 3:04 pm" (time .date) }}</span>
+          </div>
+          <div class="comment-content">
+            {{- $paragraphs := split .content "\n\n" -}}
+            {{- range $paragraphs -}}
+            {{- if ne . "" -}}
+            <p>{{ . | replaceRE "\n" " " | safeHTML }}</p>
+            {{- end -}}
+            {{- end -}}
+          </div>
+        </div>
+        {{- end -}}
+      </div>
+      {{- end -}}
+    </div>
+    {{- end -}}
+  </div>
+</div>
+
+<style>
+.comments {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.comments h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.comment {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--entry);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.comment-replies {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.comment.reply {
+  background: var(--theme);
+  border: 1px solid var(--border);
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.comment-date {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.comment-content {
+  line-height: 1.5;
+}
+
+.comment-content p {
+  margin: 0.3rem 0;
+}
+</style>
+{{- end -}}
+{{- end -}}
+{{- /* Comments area end */ -}}

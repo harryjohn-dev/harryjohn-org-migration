@@ -5,6 +5,7 @@ draft: false
 tags: ["powercli", "vmware", "powershell", "automation", "deployment", "citrix", "xenapp", "xendesktop"]
 categories: ["powercli", "vmware"]
 author: "Harry John"
+comments: true
 ---
 
 ![Deploy multiple VMs from template](/images/deploy-multiple-vms-from-template-300x211.png)

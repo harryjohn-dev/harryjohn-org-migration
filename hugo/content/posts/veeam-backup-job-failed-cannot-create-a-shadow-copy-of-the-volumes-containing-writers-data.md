@@ -5,6 +5,7 @@ title = "Veeam Backup job failed. Cannot create a shadow copy of the volumes con
 description = 'Troubleshooting Veeam backup failures related to VSS writers and disk space issues'
 tags = ['veeam', 'vmware', 'backup', 'vss', 'troubleshooting']
 categories = ['uncategorized']
+comments = true
 +++
 
 {{< figure src="/images/Backup-job-failed.png" alt="Backup job failed" caption="Backup job failed" class="alignright" width="156" height="86" >}}

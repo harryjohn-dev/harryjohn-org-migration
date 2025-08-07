@@ -5,6 +5,7 @@ draft: false
 tags: ["equallogic", "iscsi", "vmware", "san", "networking", "dell", "powerconnect"]
 categories: ["equallogic-vmware-iscsi-setup"]
 author: "Harry John"
+comments: true
 ---
 
 ![SAN LAN Network](/images/SAN-LAN-Network-e1361849167569.png)
