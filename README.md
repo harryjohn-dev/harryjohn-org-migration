@@ -12,6 +12,8 @@ This project involves migrating an old WordPress website (harryjohn.org) to some
 
 **Future approach**: Once the Hugo site is complete and ready for deployment, we'll create a separate repository containing only the Hugo site files for deployment to Cloudflare Pages.
 
+
+
 ## Current state
 
 ### Source materials
@@ -57,8 +59,29 @@ Done - see [docs/planning.md](docs/planning.md)
 
 **Progress**: ✅ Successfully imported all 6 WordPress posts with proper front matter, clean markdown, working images, and comments system. Content migration complete!
 
-### Phase 3: Publishing 🔄
-1. 🔄 Create separate Hugo-only repository for deployment
-2. ⏳ Connect the Hugo repo to Cloudflare
-3. ⏳ Publish the site to harryjohn.dev
-4. ⏳ Setup redirects and forwarders for old links at harryjohn.org
+### Phase 3: Publishing ✅
+1. ✅ Create separate Hugo-only repository for deployment
+2. ✅ Connect the Hugo repo to Cloudflare
+3. ✅ Publish the site to harryjohn.dev
+4. ✅ Setup redirects and forwarders for old links at harryjohn.org
+
+**Progress**: ✅ Successfully deployed the Hugo site to Cloudflare Pages. The site is now live at both [harryjohn.dev](https://harryjohn.dev) and [harryjohn.org](https://harryjohn.org) with all content, comments system, and proper configuration.
+
+**Repository**: The live Hugo site is maintained in [harryjohn-dev](https://github.com/harryjohn/harryjohn-dev) for clean deployment to Cloudflare Pages.
+
+
+## 🎉 Project Complete!
+
+The harryjohn.org website migration has been successfully completed! The site is now live and accessible at:
+- **Primary domain**: [harryjohn.dev](https://harryjohn.dev)
+- **Original domain**: [harryjohn.org](https://harryjohn.org) (with redirects)
+
+All original WordPress content has been preserved and enhanced with modern Hugo features including:
+- ✅ Clean, responsive design with PaperMod theme
+- ✅ All original blog posts with proper formatting
+- ✅ Working images and assets
+- ✅ Comments system
+- ✅ Tags and categories
+- ✅ SEO optimization
+- ✅ Fast loading static site
+
