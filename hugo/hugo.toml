@@ -6,7 +6,16 @@ theme = 'PaperMod'
 [params]
   description = "Harry John's blog about IT infrastructure, VMware, and technology"
   author = "Harry John"
+  ShowReadingTime = true
+  ShowWordCount = true
   
 [params.homeInfoParams]
   Title = "Hi there 👋"
   Content = "Welcome to my blog about IT infrastructure, VMware, and technology."
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
