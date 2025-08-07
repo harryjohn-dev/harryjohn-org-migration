@@ -26,13 +26,28 @@
     <loc>http://localhost:1313/posts/test-post/</loc>
     <lastmod>2025-08-07T03:39:05+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/backup/</loc>
-    <lastmod>2013-02-26T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/installation/</loc>
+    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/microsoft/</loc>
+    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/office/</loc>
+    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/office-2016-install-we-need-to-remove-some-older-apps/</loc>
+    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/office365/</loc>
+    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/troubleshooting/</loc>
-    <lastmod>2013-02-26T00:00:00+00:00</lastmod>
+    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/uncategorized/</loc>
+    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/backup/</loc>
     <lastmod>2013-02-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/veeam/</loc>

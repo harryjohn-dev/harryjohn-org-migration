@@ -140,6 +140,64 @@ Import the converted WordPress content Fix any formatting issues Update image pa
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Office 2016 Install -- &#34;We need to remove some older apps&#34;
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>“We need to remove some older apps” If you’re reading this you’ve probably already download the installer and have noticed a scary warning when starting the install: “We need to remove some older apps”.
+If you haven’t see this warning yet here’s the deal. Apparently some older apps, such as Visio Professional 2013 and Skype for Business 2015 don’t work with Office 2016. If you continue the installation, these “incompatible” apps will be removed and you won’t be able to install the old version again.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-09-22 00:00:00 +0000 UTC'>September 22, 2015</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;618 words&nbsp;·&nbsp;Harry John</footer>
+  <a class="entry-link" aria-label="post link to Office 2016 Install -- &#34;We need to remove some older apps&#34;" href="http://localhost:1313/posts/office-2016-install-we-need-to-remove-some-older-apps/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Deploy multiple VMs from template with PowerCLI
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+I frequently need to deploy multiple VMs from a template in large numbers, most often a bunch of Citrix XenApp or XenDesktop servers following an update to the gold image. Without an automated method deployment can become a headache and would take days to deploy multiple VMs, especially when taking into account the post-deploy tasks such as activating Windows, activating Office, installing Citrix, putting the computer into the right OU etc.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-01-06 00:00:00 +0000 UTC'>January 6, 2014</span>&nbsp;·&nbsp;12 min&nbsp;·&nbsp;2387 words&nbsp;·&nbsp;Harry John</footer>
+  <a class="entry-link" aria-label="post link to Deploy multiple VMs from template with PowerCLI" href="http://localhost:1313/posts/deploy-multiple-vms-from-template/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">EqualLogic VMware iSCSI Setup -- Part 3: PowerConnect Configuration
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+So, recently I configured a set of PowerConnect 7048 switches for iSCSI following all the standards and best practices I could find. Actually I had prepared the PowerConnect iSCSI configuration a few months ago, I have been waiting for the Dell experts to confirm the configuration is current best practice and fit for our environment.
+Configuring any PowerConnect model is a very similar process, however you must check the switch documentation you downloaded from the portal on part 1 of this guide – there may be a few minor differences. I will note now that PowerConnect 5524/5548 switches are not approved for use in an iSCSI environment and that iSCSI Optimisation should actually be disabled on these switches.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-12-30 00:00:00 +0000 UTC'>December 30, 2013</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;933 words&nbsp;·&nbsp;Harry John</footer>
+  <a class="entry-link" aria-label="post link to EqualLogic VMware iSCSI Setup -- Part 3: PowerConnect Configuration" href="http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">EqualLogic VMware iSCSI Setup -- Part 2: Network Configuration
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+The EqualLogic iSCSI network consists of the switches, EqualLogic arrays and ESX hosts, all of which need configuring properly to make the most of each others load balancing, performance and availability features. In terms of the network fabric, there are a few things we need to consider:
+High availability – multiple links and switches to provide redundancy Performance – elimination of bottlenecks Management – monitoring and management network This guide can apply to a range of hardware as long as we are using EqualLogic arrays and VMware ESX/ESXi hosts. The switches can be Dell or Cisco for example, as long as they are on the Dell Approved Hardware list. The hardware I used when making this guide is as follows:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-26 00:00:00 +0000 UTC'>February 26, 2013</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;514 words&nbsp;·&nbsp;Harry John</footer>
+  <a class="entry-link" aria-label="post link to EqualLogic VMware iSCSI Setup -- Part 2: Network Configuration" href="http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-2-network/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Veeam Backup job failed. Cannot create a shadow copy of the volumes containing writer&#39;s data.
     </h2>
   </header>
@@ -150,6 +208,21 @@ Occasionally one of our Veeam backup jobs will fail and most of the time it is d
   </div>
   <footer class="entry-footer"><span title='2013-02-26 00:00:00 +0000 GMT'>February 26, 2013</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;455 words&nbsp;·&nbsp;Harry John</footer>
   <a class="entry-link" aria-label="post link to Veeam Backup job failed. Cannot create a shadow copy of the volumes containing writer&#39;s data." href="http://localhost:1313/posts/veeam-backup-job-failed-cannot-create-a-shadow-copy-of-the-volumes-containing-writers-data/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">EqualLogic VMware iSCSI Setup -- Part 1: Preparation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+EqualLogic VMware iSCSI setup best practices have gone through many changes recently, fortunately Dell and VMware seem to have partnered well and made some good improvements towards the integration of their products. Development may well settle down now along with the release of ESXi 5.0/5.1 and Dell’s own Multipathing Extension Module (MEM) available to those with Enterprise vSphere licencing.
+There is a lot of documentation – whitepapers, manuals and blog posts on the topic of iSCSI setup which can become overwhelming quite quickly. The setup is actually really simple with the correct up to date documentation to hand. The entire process of the SAN network installation can be broken down into the following steps:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-24 00:00:00 +0000 UTC'>February 24, 2013</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;367 words&nbsp;·&nbsp;Harry John</footer>
+  <a class="entry-link" aria-label="post link to EqualLogic VMware iSCSI Setup -- Part 1: Preparation" href="http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-1-preparation/"></a>
 </article>
     </main>
     

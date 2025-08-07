@@ -48,16 +48,16 @@ Done - see [docs/planning.md](docs/planning.md)
 4. ✅ Create some basic content
 5. ✅ Run the site locally
 
-### Phase 2: Content migration 🔄
+### Phase 2: Content migration ✅
 1. ✅ Add front matter to hugo content pages
-2. 🔄 Cleanup and process markdown conversion
-3. 🔄 Fix assets/images/URLs
-4. ⏳ Import remaining WordPress posts
+2. ✅ Cleanup and process markdown conversion
+3. ✅ Fix assets/images/URLs
+4. ✅ Import remaining WordPress posts
 
-**Progress**: Successfully imported Veeam backup troubleshooting post with proper front matter, clean markdown, and working images.
+**Progress**: ✅ Successfully imported all 6 WordPress posts with proper front matter, clean markdown, and working images. Content migration complete!
 
-### Phase 3: Publishing ⏳
-1. ⏳ Create separate Hugo-only repository for deployment
+### Phase 3: Publishing 🔄
+1. 🔄 Create separate Hugo-only repository for deployment
 2. ⏳ Connect the Hugo repo to Cloudflare
 3. ⏳ Publish the site to harryjohn.dev
 4. ⏳ Setup redirects and forwarders for old links at harryjohn.org

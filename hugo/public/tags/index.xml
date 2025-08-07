@@ -23,17 +23,45 @@
       <description></description>
     </item>
     <item>
-      <title>Backup</title>
-      <link>http://localhost:1313/tags/backup/</link>
-      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/backup/</guid>
+      <title>Installation</title>
+      <link>http://localhost:1313/tags/installation/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/installation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft</title>
+      <link>http://localhost:1313/tags/microsoft/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Office</title>
+      <link>http://localhost:1313/tags/office/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/office/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Office365</title>
+      <link>http://localhost:1313/tags/office365/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/office365/</guid>
       <description></description>
     </item>
     <item>
       <title>Troubleshooting</title>
       <link>http://localhost:1313/tags/troubleshooting/</link>
-      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backup</title>
+      <link>http://localhost:1313/tags/backup/</link>
+      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/backup/</guid>
       <description></description>
     </item>
     <item>

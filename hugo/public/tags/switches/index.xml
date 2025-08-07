@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Switches on Harry John</title>
+    <link>http://localhost:1313/tags/switches/</link>
+    <description>Recent content in Switches on Harry John</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/switches/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EqualLogic VMware iSCSI Setup -- Part 3: PowerConnect Configuration</title>
+      <link>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/</link>
+      <pubDate>Mon, 30 Dec 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/</guid>
+      <description>Recently I configured a set of PowerConnect 7048 switches for iSCSI following all the standards and best practices I could find. Actually I had prepared the PowerConnect iSCSI configuration a few months ago, I have been waiting for the Dell experts to confirm the configuration is current best practice and fit for our environment.</description>
+    </item>
+  </channel>
+</rss>

@@ -16,11 +16,58 @@
       <description>A test post to verify Hugo site functionality</description>
     </item>
     <item>
+      <title>Office 2016 Install -- &#34;We need to remove some older apps&#34;</title>
+      <link>http://localhost:1313/posts/office-2016-install-we-need-to-remove-some-older-apps/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/office-2016-install-we-need-to-remove-some-older-apps/</guid>
+      <description>Office 2016 was made available today to the Office 365 subscribers running on PC -- it has been available to Mac users since July. However the installation might not go as smoothly as you would expect, especially if you have some older non-365 Office type applications installed.</description>
+    </item>
+    <item>
+      <title>Deploy multiple VMs from template with PowerCLI</title>
+      <link>http://localhost:1313/posts/deploy-multiple-vms-from-template/</link>
+      <pubDate>Mon, 06 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/deploy-multiple-vms-from-template/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Deploy multiple VMs from template&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/deploy-multiple-vms-from-template-300x211.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I frequently need to deploy multiple VMs from a template in large numbers, most often a bunch of Citrix XenApp or XenDesktop servers following an update to the gold image. Without an automated method deployment can become a headache and would take days to deploy multiple VMs, especially when taking into account the post-deploy tasks such as activating Windows, activating Office, installing Citrix, putting the computer into the right OU etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EqualLogic VMware iSCSI Setup -- Part 3: PowerConnect Configuration</title>
+      <link>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/</link>
+      <pubDate>Mon, 30 Dec 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-3-powerconnect-configuration/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;PowerConnect 7048 Switch&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/34017.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So, recently I configured a set of PowerConnect 7048 switches for iSCSI following all the standards and best practices I could find. Actually I had prepared the PowerConnect iSCSI configuration a few months ago, I have been waiting for the Dell experts to confirm the configuration is current best practice and fit for our environment.&lt;/p&gt;
+&lt;p&gt;Configuring any PowerConnect model is a very similar process, however you must check the switch documentation you downloaded from the portal on part 1 of this guide &amp;ndash; there may be a few minor differences. I will note now that PowerConnect 5524/5548 switches are not approved for use in an iSCSI environment and that iSCSI Optimisation should actually be disabled on these switches.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EqualLogic VMware iSCSI Setup -- Part 2: Network Configuration</title>
+      <link>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-2-network/</link>
+      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-2-network/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;SAN LAN Network&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/SAN-LAN-Network-e1361849167569.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The EqualLogic iSCSI network consists of the switches, EqualLogic arrays and ESX hosts, all of which need configuring properly to make the most of each others load balancing, performance and availability features. In terms of the network fabric, there are a few things we need to consider:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;High availability &amp;ndash; multiple links and switches to provide redundancy&lt;/li&gt;
+&lt;li&gt;Performance &amp;ndash; elimination of bottlenecks&lt;/li&gt;
+&lt;li&gt;Management &amp;ndash; monitoring and management network&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This guide can apply to a range of hardware as long as we are using EqualLogic arrays and VMware ESX/ESXi hosts. The switches can be Dell or Cisco for example, as long as they are on the Dell Approved Hardware list. The hardware I used when making this guide is as follows:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Veeam Backup job failed. Cannot create a shadow copy of the volumes containing writer&#39;s data.</title>
       <link>http://localhost:1313/posts/veeam-backup-job-failed-cannot-create-a-shadow-copy-of-the-volumes-containing-writers-data/</link>
       <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/veeam-backup-job-failed-cannot-create-a-shadow-copy-of-the-volumes-containing-writers-data/</guid>
       <description>Troubleshooting Veeam backup failures related to VSS writers and disk space issues</description>
+    </item>
+    <item>
+      <title>EqualLogic VMware iSCSI Setup -- Part 1: Preparation</title>
+      <link>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-1-preparation/</link>
+      <pubDate>Sun, 24 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/equallogic-vmware-iscsi-setup-part-1-preparation/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Dell VMware&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/dell-vmware1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;EqualLogic VMware iSCSI setup best practices have gone through many changes recently, fortunately Dell and VMware seem to have partnered well and made some good improvements towards the integration of their products. Development may well settle down now along with the release of ESXi 5.0/5.1 and Dell&amp;rsquo;s own Multipathing Extension Module (MEM) available to those with Enterprise vSphere licencing.&lt;/p&gt;
+&lt;p&gt;There is a lot of documentation &amp;ndash; whitepapers, manuals and blog posts on the topic of iSCSI setup which can become overwhelming quite quickly. The setup is actually really simple with the correct up to date documentation to hand. The entire process of the SAN network installation can be broken down into the following steps:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
