@@ -2,12 +2,33 @@
 description: Commit Frequently with Conventional Commits
 alwaysApply: true
 ---
-Use conventional commits format: `type: Capitalized description`
+Use conventional commits format: `type: description` (no scopes)
+
+Types:
+- `feat`: Commits that add, adjust or remove a new feature to the API or UI
+- `fix`: Commits that fix an API or UI bug of a preceded feat commit
+- `refactor`: Commits that rewrite or restructure code without altering API or UI behavior
+- `perf`: Commits are special type of refactor commits that specifically improve performance
+- `style`: Commits that address code style and do not affect application behavior
+- `test`: Commits that add missing tests or correct existing ones
+- `docs`: Commits that exclusively affect documentation
+- `build`: Commits that affect build-related components such as build tools, dependencies, project version, CI/CD pipelines
+- `ops`: Commits that affect operational components like infrastructure, deployment, backup, recovery procedures
+- `chore`: Miscellaneous commits e.g. modifying .gitignore
 
 Examples:
-- `feat: Add PaperMod theme to Hugo site`
-- `config: Update Hugo baseURL and site title`
-- `content: Import WordPress posts as markdown`
-- `fix: Resolve image path issues in blog posts`
+- `feat: add new blog post about VMware setup`
+- `feat: add PaperMod theme to Hugo site`
+- `feat: add social media sharing buttons`
+- `fix: resolve image path issues in blog posts`
+- `fix: correct broken links in navigation`
+- `refactor: reorganise content structure`
+- `perf: optimise Hugo build process`
+- `style: format markdown files consistently`
+- `test: add validation for post front matter`
+- `docs: update README with migration progress`
+- `build: update Hugo to latest version`
+- `ops: update deployment configuration`
+- `chore: remove test post`
 
 The AI assistant will suggest commits and run the command directly after significant steps.
