@@ -6,5 +6,12 @@ Project context and information is stored in @README.md. Always read the @README
 - Project overview and goals
 - Current state and progress
 
+**IMPORTANT**: When we make progress on the project:
+- Update the @README.md file to reflect current status
+- Mark completed phases with ✅
+- Update progress indicators (🔄, ⏳) as appropriate
+- Add notes about what was accomplished
+
 When we discuss a change in direction for the project:
 - Update the @README.md file to match the new direction
+- Current state and progress
